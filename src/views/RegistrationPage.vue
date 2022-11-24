@@ -91,6 +91,22 @@ export default defineComponent({
       jumlahikan: '',
       materialkolam: '',
       bentukkolam: '',
+      
+      
+      material_options: [
+        {key: 'tanah', value: 'Tanah'},
+        {key: 'beton', value: 'Beton'},
+        {key: 'terpal', value: 'Terpal'}
+      ],
+      shape_options: [
+        {key: 'kotak', value: 'Kotak'},
+        {key: 'bundar', value: 'Bundar'}
+      ],
+      getBackButtonText: () => {
+        const win = window as any;
+        const mode = win && win.Ionic && win.Ionic.mode;
+        return mode === 'ios' ? 'Back' : '';
+      }
     }
   },
 
