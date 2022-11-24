@@ -126,6 +126,14 @@ export default defineComponent({
         "bentuk-kolam": this.bentukkolam,
       };
       console.log(pond);
+      axios
+              .post("http://127.0.0.1:5000/api/v1/registrasi", pond)
+              .then((response) => {
+                  console.log(response);
+              })
+              .catch((error) => {
+                  console.log(error);
+              });
     },
   },
   setup() {
